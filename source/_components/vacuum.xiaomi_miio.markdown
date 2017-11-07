@@ -191,7 +191,8 @@ To fetch the token follow these instructions depending on your mobile phone plat
 4. `adb devices` should list your device
 5. `adb root` (does work for development builds only: ones with `ro.debuggable=1`)
 6. `adb shell`
-7. `echo "select name,localIP,token from devicerecord;" | sqlite3 /data/data/com.xiaomi.smarthome/databases/miio2.db` returns a list of all registered devices including IP address and token.
+7. (`su -` if `adb root` was not successful)
+8. `echo "select name,localIP,token from devicerecord;" | sqlite3 /data/data/com.xiaomi.smarthome/databases/miio2.db` returns a list of all registered devices including IP address and token.
 
 #### {% linkable_title iOS %}
 
